@@ -5,7 +5,7 @@ const Weather = props => {
 
   return (
     <div className='weather-section'>
-      <h3>{props.city}, {props.country}</h3>
+      <h3>{props.city}</h3>
       {/* <h3>{props.city}</h3>
       <h4>{props.country}</h4> */}
       <div>
