@@ -1,0 +1,236 @@
+@import url("https://use.typekit.net/mzm8rqr.css");
+
+$primary-color-1: #845ec2;
+$primary-color-2: #f9f771;
+$secondary-color: #fd5076;
+$secondary-color-hover: #ff768d;
+$text-color: #504d57;
+$select-color: #ffd753;
+$text-color-white: #ffffff;
+$font: 'Voguing', sans-serif;
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: $primary-color-2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
+  font-family: $font;
+  color: $primary-color-1;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  &::selection {
+    background: $select-color;
+  }
+
+  margin-block-start:0; 
+  margin-block-end:0; 
+  margin-inline-start:0; 
+  margin-inline-end:0;
+  padding-block-start:0; 
+  padding-block-end:0; 
+  padding-inline-start:0; 
+  padding-inline-end:0;
+}
+
+h1 {
+  font-size: 80px;
+}
+h2 {
+  font-size: 40px;
+  line-height: 2.4rem;
+  color: $text-color;
+}
+h3 {
+    font-size: 30px;
+    line-height: 2.4rem;
+}
+p {
+  font-size: 16px;
+  color: $text-color;
+  line-height: 30px;
+  @media screen and (max-width: 426px) {
+    & {
+      line-height: 28px;
+    }
+  }
+}
+span {
+  font-size: 30px;
+}
+
+
+.wrap {
+  text-align: center;
+}
+
+input[type=text] {
+  width: 80%;
+  max-width: 280px;
+  padding: 10px 10px;
+  border: none;
+  background-color: $primary-color-2;
+  border-bottom: 4px solid $primary-color-1;  
+  font-size: 18px;
+  font-family: $font;
+  color: $text-color;
+
+  &:focus {
+    outline: none;
+    background-color: $primary-color-2;
+  }
+  &:active {
+    background-color: $primary-color-2;
+  }
+  &, textarea {
+    background-color : $primary-color-2; 
+  }
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $text-color;
+    background-color:transparent;
+    transition: background-color 50000s ease-in-out 0s;
+  }
+  &::selection {
+    background: $select-color;
+  }
+}
+
+button {
+  font-family: $font;
+  font-size: 16px;
+  background: $secondary-color;
+  padding: 0.6rem 2.5rem;
+  color: $text-color-white;
+  border: 1px solid $secondary-color;
+  margin: 0rem 1rem 0rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color-hover;
+  }
+  &:focus {
+    font: $font;
+    outline: none;
+  }
+  &::selection {
+    background: $select-color;
+  }
+}
+
+.title {
+  margin: 2rem 1rem 2.5rem 1rem;
+  @media screen and (max-width: 426px) {
+    & {
+        margin: 1.5rem 1rem 0rem 1rem;
+      }
+      h2 { 
+        font-size: 2rem;
+        line-height: 2.2rem;
+      }
+  }
+}
+.search {
+  &-section {
+    margin: 4rem 1rem 4rem 1rem;
+    @media screen and (max-width: 426px) {
+      & {
+        margin: 1rem 1rem 1rem 1rem;
+      }
+    }
+  }
+  &-input {
+    margin: 0rem 1rem 0rem 1rem;
+    @media screen and (max-width: 426px) {
+      & {
+          margin: 0rem 1rem 0.8rem 1rem;
+        }
+      }
+  }
+  &-btn {
+    margin: 0rem 1rem 0rem 1rem;
+    @media screen and (max-width: 426px) {
+      & {
+          margin: 0.8rem 1rem 0.8rem 1rem;
+        }
+      }
+  }
+}
+.weather {
+  &-section {
+    margin: 4rem 1rem 4rem 1rem;
+    @media screen and (max-width: 426px) {
+      & {
+        margin: 1rem 1rem 1rem 1rem;
+      }
+    }
+  }
+  &-img {
+    margin: 1.5rem;
+    width: 75px;
+    @media screen and (max-width: 426px) {
+      margin: 0.5rem;
+      width: 65px;
+    }  
+    &::selection {
+      background: $select-color;
+    }
+  }
+  &-temp {
+    padding: 0rem 1rem 1rem 1rem;
+    @media screen and (max-width: 426px) {
+      & {
+        padding: 0rem 1rem 1rem 1rem;
+      }
+    }
+  }
+}
+
+.modal {
+  &-wrapper {
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    p {
+      padding: 1.5rem 0rem 2.5rem 0rem;
+    }
+    button {
+      margin: 0rem 0rem 0rem 0rem;
+    }
+  } 
+  &-content {
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 50%;
+    border-radius: 12px;
+    background: white;
+    text-align: center;
+    @media screen and (max-width: 426px) {
+      min-width: 250px;
+    }  
+  }
+}
+
+
+
