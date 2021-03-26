@@ -72,7 +72,7 @@ const WeatherDisplay = () => {
       />
       <Weather 
         city={cityName}
-        country={weather.sys.country}
+        // country={weather.sys.country}
         icon={weather.weather[0].icon}
         description={weather.weather[0].description}
         temperature={weather.main.temp}
